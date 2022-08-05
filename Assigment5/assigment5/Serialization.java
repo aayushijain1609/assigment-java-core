@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.text.ParseException;
+import java.text.ParseException; 
 
 
 public class Serialization {
@@ -29,21 +29,22 @@ public class Serialization {
             
          ObjectOutputStream o = new ObjectOutputStream(new FileOutputStream("assigment5//output1.ser"));
          ObjectOutputStream o1 = new ObjectOutputStream(new FileOutputStream("assigment5//output2.ser")); 
-         o.writeObject(s1);
+            o.writeObject(s1);
             o.writeObject(s2);
             o.writeObject(s3);
             o.writeObject(s4);
             o.writeObject(s5);
             o.close();
 
-         o1.writeObject(s1);
+            o1.writeObject(s1);
             o1.writeObject(s2);
             o1.writeObject(s3);
             o1.writeObject(s4);
             o1.writeObject(s5);
             o1.close();
            
-        } catch (IOException | ParseException e) {
+        }
+        catch (IOException | ParseException e) {
             System.out.println("error occur");
             System.out.println(e);
         }
